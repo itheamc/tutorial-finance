@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css for body */
+body {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+
+/* Css styling for the nav bar */
+.top-nav-bar {
+    width: 100%;
+    min-height: 64px;
+    background-color: #3305d1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 32px;
+}
+
+
+/* css styling for the nav list */
+.nav-list {
+    height: 64px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s linear;
+}
+
+/* css styling for the nav items */
+.nav-items {
+    display: inline-flex;
+    padding: 8px 24px;
+    margin: 0 8px;
+    text-align: center;
+    /* border: 1px solid yellow; */
+    transition: all 0.4s linear;
+}
+
+/* css styling whenever mouse hover over the nav item */
+.nav-items:hover {
+    cursor: pointer;
+    background-color: rgba(216, 191, 216, 0.219);
+    color: whitesmoke;
+
+}
+
+.nav-items a {
+    color: thistle;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-items i {
+    color: thistle;
+    line-height: 20px;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* css styling for the main div */
+.background-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/topbg.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    display: flex;
+}
+
+/* company name div */
+.company-name-div {
+    width: auto;
+    min-height: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#company-name {
+    color: thistle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+/* menu icon */
+.menu-icon {
+    display: none;
+}
+
+/* css for invisible */
+.make-invisible {
+    display: none;
+}
+
+
+/*_____________ For Devices Scree width below 900px__________________ */
+
+@media only screen and (max-width: 900px) {
+    /* Css styling for the nav bar */
+    .top-nav-bar {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* css styling for the nav list */
+    .nav-list {
+        width: 100%;
+    }
+
+    .company-name-div {
+        width: 100%;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    
+}
+
+
+/*_____________ For Devices Scree width below 800px__________________ */
+
+@media only screen and (max-width: 800px) {
+
+    /* top nav bar */
+    .top-nav-bar {
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Company name div */
+    .company-name-div {
+        width: fit-content;
+        height: 100%;
+        justify-content: center;
+        margin: 0 16px;
+    }
+
+    /* menu icon div */
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        margin: 0 16px;
+    }
+
+    .menu-icon i {
+        color: cornsilk;
+        font-size: 16px;
+        z-index: 1;
+    }
+
+    /* css styling for the nav list */
+    .nav-list {
+        height: 100%;
+        position: absolute;
+        background-color: #3305d1;
+        flex-direction: column;
+        /* top: 64px; */
+        z-index: 1;
+        left: -100%;
+    }
+    /* css styling for the nav items */
+    .nav-items {
+        width: 90%;
+        display: block;
+        margin: 16px 8px;
+        padding: 12px 24px;
+    }
+}
